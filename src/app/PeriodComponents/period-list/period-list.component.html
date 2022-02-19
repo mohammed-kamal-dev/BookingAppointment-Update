@@ -1,0 +1,43 @@
+
+<button class="btn btn-info btn-lg" style="margin-left: 10px" (click)="goToForm()">Add Period</button>
+            <!-- /.card-header -->
+              <div class="card-body">
+                <table class="table ">
+                  <thead>                  
+                    <tr>
+                      <th>Period Type</th>
+                      <th>Rest Time</th>
+                      <th>Start</th>
+                      <th>End</th>
+
+                      <th>Details</th>
+                      <th>Edit</th>
+                      <th>Remove</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let period of result">
+                      <td>{{period.periodType}}</td>
+                      <td>{{period.restTime}}</td>
+                      <td>{{period.startTime }}</td>
+                      <td>{{period.endTime }}</td>
+                      
+                      <td><button type="button" id="details" class="btn btn-primary" (click)="details(period.id)">Details</button></td>
+                      <td><button type="button" id="update" class="btn btn-success" (click)="redirectToUpdatePage(period.id)">Update</button></td>
+                      <td><button type="button" id="delete" class="btn btn-danger" (click)="deletePeriod(period.id)">Delete</button></td>
+                    </tr>
+
+                  </tbody>
+                </table>
+
+                <div class="card-footer clearfix">
+                    <ul class="pagination pagination-sm m-0 float-right">
+                      <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+                    </ul>
+                  </div>
+              </div>
+              <!-- /.card-body -->

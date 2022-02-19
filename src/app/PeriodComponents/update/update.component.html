@@ -1,0 +1,57 @@
+<section class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- left column -->
+        <div class="col-md-6">
+          <!-- general form elements -->
+          <div class="card card-primary">
+
+            <!-- /.card-header -->
+            <!-- form start -->
+            <form form [formGroup]="periodForm" autocomplete="off" novalidate (ngSubmit)="updatePeriod(periodForm.value)"role="form">
+              <div class="card-body">
+
+                <div class="form-group">
+                  <label for="PeriodType">Period Type</label>
+                  <select formControlName="PeriodType" id="PeriodType" class="form-control">
+                    <option selected>Open this select menu</option>
+                    <option value="1">Night</option>
+                    <option value="1">Morning</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="RestTime">Rest Time</label>
+                  <input type="number" formControlName="RestTime" id="RestTime" class="form-control" id="Rest Time" placeholder="Enter Rest Time">
+                </div>
+
+                <div class="form-group">
+                  <label for="StartTime">Start Time</label>
+                  <input type="time" formControlName="StartTime" id="StartTime"   class="form-control" id="Start Time" placeholder="Enter Start Time">
+                </div>
+
+                <div class="form-group">
+                  <label for="EndTime">End Time</label>
+                  <input type="time" formControlName="EndTime" id="EndTime"   class="form-control" id="Start Time" placeholder="Enter Start Time">
+                </div>
+
+
+              </div>
+              <!-- /.card-body -->
+
+              <div class="card-footer">
+                <button type="submit" class="btn btn-primary">Save</button>
+              </div>
+            </form>
+          </div>
+          <!-- /.card -->
+
+        </div>
+        <!--/.col (left) -->
+      </div>
+      <!-- /.row -->
+    </div><!-- /.container-fluid -->
+  </section>
+
+
+  

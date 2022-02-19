@@ -1,0 +1,43 @@
+<section class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- left column -->
+        <div class="col-md-6">
+          <!-- general form elements -->
+          <div class="card card-primary">
+
+            <!-- /.card-header -->
+            <!-- form start -->
+            <form [formGroup] = "DoctorForm" autocomplete="off" novalidate (ngSubmit)="createDoctor(DoctorForm.value)"  role="form">
+              <div class="card-body">
+
+                <div class="form-group"> 
+                  <label for="FirstName">First Name</label>
+                  <input type="text" formControlName="firstName" id="FirstName" class="form-control" placeholder="Enter RFirstName">
+                </div>
+
+                <div class="form-group">
+                  <label for="LastName">Last Name</label>
+                  <input type="text" formControlName="lastName" id="LastName"   class="form-control"  placeholder="Enter LastName">
+                </div>
+
+
+              </div>
+              <!-- /.card-body -->
+
+              <div class="card-footer">
+                <button type="submit" class="btn btn-primary">Save</button>
+              </div>
+            </form>
+          </div>
+          <!-- /.card -->
+
+        </div>
+        <!--/.col (left) -->
+      </div>
+      <!-- /.row -->
+    </div><!-- /.container-fluid -->
+  </section>
+
+
+  

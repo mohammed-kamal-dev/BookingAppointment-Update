@@ -1,0 +1,41 @@
+
+  <div class="card-body">
+    
+    <table class="table ">
+      <thead>                  
+        <tr>
+          <th>Doctor Name</th>
+          <th>startTime</th>
+          <th>endTime</th>
+          <th>Period</th>
+          <th>Day</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let appointment of result">
+          <td>{{appointment.doctorName}}</td>
+
+          <td>{{appointment.startTime}}</td>
+          <td>{{appointment.endTime}}</td>
+
+          <td>{{appointment.period}}</td>
+          <td>{{appointment.day}}</td>
+
+          
+        </tr>
+
+      </tbody>
+    </table>
+
+    <div class="card-footer clearfix">
+        <ul class="pagination pagination-sm m-0 float-right">
+          <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+        </ul>
+      </div>
+  </div>
+  <!-- /.card-body -->

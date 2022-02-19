@@ -1,0 +1,36 @@
+
+<button class="btn btn-info btn-lg" style="margin-left: 10px" (click)="goToForm()">Add Doctor</button>
+<!-- /.card-header -->
+  <div class="card-body">
+    <table class="table ">
+      <thead>                  
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          
+          <th>View Schedule</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let doctor of result">
+          <td>{{doctor.firstName}}</td>
+          <td>{{doctor.lastName}}</td>
+          
+          <td><button type="button" id="details" class="btn btn-primary" (click)="details(doctor.id)">View Schedule</button></td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <div class="card-footer clearfix">
+        <ul class="pagination pagination-sm m-0 float-right">
+          <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+        </ul>
+      </div>
+  </div>
+  <!-- /.card-body -->

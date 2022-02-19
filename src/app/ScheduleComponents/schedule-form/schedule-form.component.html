@@ -1,0 +1,124 @@
+<section class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- left column -->
+        <div class="col-md-12">
+          <!-- general form elements -->
+          <div class="card card-primary">
+
+            <!-- /.card-header -->
+            <!-- form start -->
+            <form [formGroup] = "scheduleForm" autocomplete="off" novalidate (ngSubmit)="createschedule(scheduleForm.value)"  role="form">
+              <div class="card-body">
+
+              <div class="col-md-6"></div>
+              <div class="col-md-6"></div>
+
+
+              <div class="row">
+                <div class="col-md-6">
+                <div class="form-group">
+                  <label for="Doctor Name">Doctor Name</label>
+                  <select class="form-control" formControlName="doctor" id="doctor">
+                    <option *ngFor="let doctor of docotors" [ngValue]="doctor.id" selected>{{doctor.firstName}}</option>
+                  </select>
+                </div>
+                </div>
+                
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="sessionTime">sessionTime (minutes)</label>
+                    <input type="number" formControlName="sessionTime" id="sessionTime"   class="form-control"  >
+                  </div>
+                  </div>
+                
+               
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="startDate">startDate</label>
+                      <input type="date" formControlName="startDate" id="startDate" class="form-control" >
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="endtDate">endtDate</label>
+                    <input type="date" formControlName="endtDate" id="endtDate"   class="form-control"  >
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="restTimeBetweenSession">restTimeBetweenSession (minutes)</label>
+                    <input type="number" formControlName="restTimeBetweenSession" id="restTimeBetweenSession"   class="form-control"  >
+                  </div>
+                </div>
+                
+                <div class="col-md-6">
+
+                  <div class="form-group">
+                    <label for="restTimeBetweenPeriod">restTimeBetweenPeriod (hours)</label>
+                    <input type="number" formControlName="restTimeBetweenPeriod" id="restTimeBetweenPeriod"   class="form-control"  >
+                  </div>
+                  </div>
+              </div>
+
+
+              <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                    <label for="morningPeriodStartTime">morningPeriodStartTime</label>
+                    <input type="time" formControlName="morningPeriodStartTime" id="morningPeriodStartTime"   class="form-control"  >
+                  </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                    <label for="morningPeriodEndTime">morningPeriodEndTime</label>
+                    <input type="time" formControlName="morningPeriodEndTime" id="morningPeriodEndTime"   class="form-control"  >
+                  </div>
+
+                </div>
+              </div>
+
+
+              <div class="row">
+                <div class="col-md-6">
+                   <div class="form-group">
+                    <label for="nightPeriodStartTime">nightPeriodStartTime</label>
+                    <input type="time" formControlName="nightPeriodStartTime" id="nightPeriodStartTime"   class="form-control"  >
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="nightPeriodEndTime">nightPeriodEndTime</label>
+                    <input type="time" formControlName="nightPeriodEndTime" id="nightPeriodEndTime"   class="form-control"  >
+                  </div>
+                </div>
+              </div>
+
+
+              </div>
+              <!-- /.card-body -->
+
+              <div style="text-align: center;" class="card-footer">
+                <button style="width: 20%;" type="submit" class="btn btn-primary">Save</button>
+              </div>
+            </form>
+          </div>
+          <!-- /.card -->
+
+        </div>
+        <!--/.col (left) -->
+      </div>
+      <!-- /.row -->
+    </div><!-- /.container-fluid -->
+  </section>
+
+
+  
